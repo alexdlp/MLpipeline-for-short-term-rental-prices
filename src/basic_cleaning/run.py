@@ -38,6 +38,9 @@ def basic_cleaning(args):
     logger.info("Convert last_review columns to date")
     data_frame['last_review'] = pd.to_datetime(data_frame['last_review'])
 
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    df = df[idx].copy()
+
     # Saving the artifact
     filename = args.output_artifact
     data_frame.to_csv(filename, index=False)
