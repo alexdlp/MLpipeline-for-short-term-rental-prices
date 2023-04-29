@@ -1,12 +1,9 @@
-name: eda
+name: basic_cleaning
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - jupyterlab=3.6.3
-  - seaborn=0.12.0
-  - pandas=2.0.1
   - pip=23.1.1
-  - pyarrow=11.0.0
+  - pandas=2.0.1
   - pip:
       - wandb==0.15.0
